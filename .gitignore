@@ -1,0 +1,12 @@
+#Python
+
+*.pyc
+
+#Buildout
+
+var/
+Paste*
+develop-eggs/
+*egg-info*
+parts/
+bin/
