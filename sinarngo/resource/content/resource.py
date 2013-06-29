@@ -19,6 +19,8 @@ from z3c.relationfield.schema import RelationList, RelationChoice
 from plone.formwidget.contenttree import ObjPathSourceBinder
 from plone.multilingualbehavior.directives import languageindependent
 
+from collective import dexteritytextindexer
+
 from sinarngo.resource import MessageFactory as _
 
 
@@ -29,9 +31,11 @@ class IResource(form.Schema, IImageScaleTraversable):
     Publications, Training Materials, Videos and more
     """
 
+    dexteritytextindexer.searchable('title')
     title = schema.TextLine(title=u'Name', 
                          description=u'Name of resource.')
 
+    dexteritytextindexer.searchable('description')
     description = schema.Text(title=u'Description',
                                   description=u'Brief description '
                                   'of resource.'
@@ -40,3 +44,9 @@ class IResource(form.Schema, IImageScaleTraversable):
         title=_(u'Type'),
         vocabulary = "sinarngo.resource.types"
     )
+
+    dexteritytextindexer.searchable('details')
+    details = RichText(
+                title=_(u"Details"),
+                required=False,
+            ) 

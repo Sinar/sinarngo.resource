@@ -10,28 +10,28 @@ class Types(grok.GlobalUtility):
     grok.implements(IVocabularyFactory)
 
     _terms = [
-        dict( value = 'policy',
-          title = u'Policy, Strategy, Plan',
-        ),
+        dict(   value = 'application',
+            title = 'Application or Product'),
+        dict(
+            value = 'data',
+            title = u'Data, Surveys'
+            ),
         dict( 
             value = 'legislation',
-            title = u'Legislation, Regulation',
+            title = u'Legislation, Regulations',
         ),
-        dict(
-            value = 'training',
-            title = u'Training, Guide'
+        dict( value = 'policy',
+          title = u'Policy, Strategy or Plan',
         ),
         dict(
              value = 'project',
              title = u'Project',
          ),
         dict(
-            value = 'data',
-            title = u'Data, Survey'
-            ),
-        dict(   value = 'application',
-            title = 'Application, Product, Portal'),
-    ]
+            value = 'training',
+            title = u'Training Material, Guides'
+        ),
+            ]
 
     def __call__(self, context):
         terms = []
