@@ -4,7 +4,8 @@ Changelog
 0.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add initial view
+- Add credits and description
 
 
 0.1 (2013-07-01)
