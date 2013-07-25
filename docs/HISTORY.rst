@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2 (unreleased)
+0.2 (2013-07-26)
 ----------------
 
 - Add initial view
