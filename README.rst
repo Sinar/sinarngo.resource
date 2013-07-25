@@ -1,4 +1,25 @@
 README for sinarngo.resource
 ==========================================
 
-This product contains traces of nuts
+A Resource Plone content type to organize basic categories of resources such
+as research papers, data, guides etc.
+
+Additional fields should be extended via behaviours.
+
+CREDITS
+=======
+
+Development funded by
+---------------------
+
+International Development Research Centre (IDRC) http://www.idrc.ca
+through e-Dirap project.
+
+Internews http://www.internews.org
+
+Design
+------
+
+ * Christine Apikul <christine_apikul@yahoo.com>
+ * ILO CoP Asia-Pacific facilitators
+   http://www.ilo.org/asia/info/library/WCMS_125850/lang--en/index.htm
