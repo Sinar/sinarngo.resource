@@ -28,6 +28,10 @@ class Types(grok.GlobalUtility):
              title = u'Project',
          ),
         dict(
+             value = 'research',
+             title = u'Research reports, working paper',
+         ),
+        dict(
             value = 'training',
             title = u'Training Material, Guides'
         ),
