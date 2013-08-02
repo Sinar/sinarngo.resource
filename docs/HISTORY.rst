@@ -4,7 +4,10 @@ Changelog
 0.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add new type media, for interviews, panels and hangouts.
+- Improve formatting for view.
+
+Funded by: IDRC <www.idrc.ca> for e-DirAP <www.digitalreview.asia>
 
 
 0.3 (2013-07-26)
