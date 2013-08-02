@@ -20,6 +20,10 @@ class Types(grok.GlobalUtility):
             value = 'legislation',
             title = u'Legislation, Regulations',
         ),
+        dict( 
+            value = 'media',
+            title = u'Interview, Panel, Presentation',
+        ),
         dict( value = 'policy',
           title = u'Policy, Strategy or Plan',
         ),

@@ -11,7 +11,7 @@
   <metal:content-core define-macro="content-core">
 
     <h3>Resource Type</h3>
-  <p tal:content="context/resource_type"/>
+  <p tal:content="structure view/w/resource_type/render"/>
 
   <h3>Details</h3>
   <div tal:content="structure view/w/details/render">
