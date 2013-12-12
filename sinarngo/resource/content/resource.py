@@ -46,7 +46,28 @@ class IResource(form.Schema, IImageScaleTraversable):
     )
 
     dexteritytextindexer.searchable('details')
-    details = RichText(
-                title=_(u"Details"),
-                required=False,
-            ) 
+    details = schema.Text(
+        title=_(u"Details"),
+        required=False,
+    )
+
+
+    attachment_1 = NamedFile(
+        title=_(u'Attachment 1'),
+        required=True
+    )
+
+    attachment_2 = NamedFile(
+        title=_(u'Attachment 2'),
+        required=False
+    )
+
+    attachment_3 = NamedFile(
+        title=_(u'Attachment 2'),
+        required=False
+    )
+
+    url = schema.TextLine(
+        title=_(u'URL'),
+        required=False
+    )
