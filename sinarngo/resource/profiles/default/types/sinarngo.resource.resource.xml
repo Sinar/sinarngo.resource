@@ -11,15 +11,12 @@
   <property name="factory">sinarngo.resource.resource</property>
   <property name="global_allow">True</property>
   <property name="filter_content_types">True</property>  
-  <property name="allowed_content_types">
-    <element value="File" />
-    <element value="Link" />
-  </property>
+  <property name="allowed_content_types"/>
   <property name="allow_discussion">True</property>
 
   <!-- schema and class used for content items -->
   <property name="schema">sinarngo.resource.content.resource.IResource</property> 
-  <property name="klass">plone.dexterity.content.Container</property>
+  <property name="klass">plone.directives.dexterity.Item</property>
   <property name="behaviors">
      <element value="plone.app.content.interfaces.INameFromTitle" />
      <element value="plone.app.content.interfaces.IReindexOnModify" />
