@@ -19,10 +19,16 @@
 
     <fieldset id="folder-listing">
         <legend>Contents</legend>
-        <tal:block define="listing_macro context/folder_listing/macros/listing">
-            <metal:use_macro use-macro="listing_macro" />
-        </tal:block>
+
+    <ul>
+        <li tal:content="structure view/w/attachment_1/render"></li>
+        <li tal:content="structure view/w/attachment_2/render"></li>
+        <li tal:content="structure view/w/attachment_3/render"></li>
+  </ul>
     </fieldset>
+
+  <h3>URL</h3>
+        <a tal:attributes="href context/url" tal:content="structure view/w/url/render"></a>
 
   </metal:content-core>
 </metal:main>
