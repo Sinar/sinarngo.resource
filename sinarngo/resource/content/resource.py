@@ -46,6 +46,7 @@ class IResource(form.Schema, IImageScaleTraversable):
     )
 
     dexteritytextindexer.searchable('details')
+    form.widget(details="plone.app.z3cform.wysiwyg.WysiwygFieldWidget")
     details = schema.Text(
         title=_(u"Details"),
         required=False,
