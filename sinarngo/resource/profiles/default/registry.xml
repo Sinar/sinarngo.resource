@@ -1,0 +1,14 @@
+<registry>
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+           prefix="plone.app.querystring.field.resource_type">
+    <value key="title">Resource Type</value>
+    <value key="description">Resource Types</value>
+    <value key="enabled">True</value>
+    <value key="sortable">False</value>
+    <value key="operations">
+        <element>plone.app.querystring.operation.selection.is</element>
+    </value>
+    <value key="vocabulary">sinarngo.resource.types</value>
+    <value key="group">Metadata</value>
+  </records>
+</registry>

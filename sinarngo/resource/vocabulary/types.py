@@ -24,6 +24,10 @@ class Types(grok.GlobalUtility):
             value = 'media',
             title = u'Interview, Panel, Presentation',
         ),
+        dict(
+            value = 'periodical',
+            title = 'Newsletter, Journal',
+        ),
         dict( value = 'policy',
           title = u'Policy, Strategy or Plan',
         ),

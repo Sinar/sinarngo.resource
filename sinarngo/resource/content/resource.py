@@ -55,7 +55,7 @@ class IResource(form.Schema, IImageScaleTraversable):
 
     attachment_1 = NamedFile(
         title=_(u'Attachment 1'),
-        required=True
+        required=False
     )
 
     attachment_2 = NamedFile(

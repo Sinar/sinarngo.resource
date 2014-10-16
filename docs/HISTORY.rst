@@ -4,7 +4,7 @@ Changelog
 0.7 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add catalog for resource_type and collection registry
 
 
 0.6 (2014-01-29)
