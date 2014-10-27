@@ -10,12 +10,20 @@ class Types(grok.GlobalUtility):
     grok.implements(IVocabularyFactory)
 
     _terms = [
+        dict(   value = 'activity',
+            title = 'Activity or Event Report'),
         dict(   value = 'application',
             title = 'Application or Product'),
+        dict(   value = 'promotional',
+            title = 'Brochure, Promotional Materials'),
         dict(
             value = 'data',
             title = u'Data, Surveys'
             ),
+        dict( 
+            value = 'factsheet',
+            title = u'Fact Sheets',
+        ),
         dict( 
             value = 'legislation',
             title = u'Legislation, Regulations',

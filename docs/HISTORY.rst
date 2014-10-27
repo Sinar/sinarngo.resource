@@ -5,6 +5,7 @@ Changelog
 ----------------
 
 - Add catalog for resource_type and collection registry
+- Add Fact Sheet, Activity Reports, Promotional Materials [IDWF]
 
 
 0.6 (2014-01-29)
