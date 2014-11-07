@@ -14,16 +14,14 @@ class Types(grok.GlobalUtility):
             title = 'Activity or Event Report'),
         dict(   value = 'application',
             title = 'Application or Product'),
+        dict(   value = 'books',
+            title = 'Books'),
         dict(   value = 'promotional',
             title = 'Brochure, Promotional Materials'),
         dict(
             value = 'data',
-            title = u'Data, Surveys'
+            title = u'Data, Surveys, Fact Sheets'
             ),
-        dict( 
-            value = 'factsheet',
-            title = u'Fact Sheets',
-        ),
         dict( 
             value = 'legislation',
             title = u'Legislation, Regulations',
@@ -49,7 +47,7 @@ class Types(grok.GlobalUtility):
          ),
         dict(
             value = 'training',
-            title = u'Training Material, Guides'
+            title = u'Training Material, Guides, Organizing/Educational Materials'
         ),
             ]
 
