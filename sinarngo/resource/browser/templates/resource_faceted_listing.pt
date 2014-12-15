@@ -61,36 +61,67 @@
                                    item_start item/start|item/StartDate|nothing;
                                    item_end item/end|item/EndDate|nothing;
                                    item_sametime python: item_start == item_end;
+                                   mtool context/portal_membership;
                                    item_samedate python: (item_end - item_start &lt; 1) if item_type == 'Event' else False">
             <metal:block define-slot="entry">
             <tal:block define="resourceview nocall:context/@@resource_faceted_listing">
 
 
-              <div class="resource">
+              <div class="tileItem ">
     
+                  <a href="#"
+                      tal:condition="item_obj/image|nothing"
+                      tal:attributes="href item/getURL">
+                      <div>
+                          <img src="" alt=""
+                               tal:define="scales item_obj/@@images;
+                                           scale python:scales.scale('image', 'thumb')"
+                               tal:replace="structure python:scale and scale.tag(css_class='tileImage') or None" />
+                      </div>
+                  </a>
+     
 
-               <div class="resource-title"><a tal:attributes="href item_url"
-                        tal:content="item_title_or_id"></a></div>
-               <div tal:condition="item_published" tal:content="python:toLocalizedTime(item_published, long_format=1)"></div>
-               <div tal:content="item_description" class="resource-description">
-               </div>
+                   <h2 class="resource-title"><a tal:attributes="href item_url"
+                            tal:content="item_title_or_id"></a></h2>
 
 
+                    <div class="documentByLine">
+                        <tal:name tal:condition="item_creator"
+                            tal:define="author python:mtool.getMemberInfo(item_creator)">
+                          <span i18n:translate="label_by_author">
+                            contributed by
+                          <a href="#"
+                             tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/author/${item_creator}"
+                             tal:content="python:author and author['fullname'] or item_creator"
+                             tal:omit-tag="not:author"
+                             i18n:name="author">
+                            Bob Dobalina
+                          </a>
+                          </span>
+                        </tal:name>
+                        <br />
+                        <b>Publishing Date:</b>&nbsp;
+                         <span tal:on-error="string: No date set" 
+                              tal:define="DateTime python:modules['DateTime'].DateTime;"
+                              tal:replace="python: DateTime(item_published).strftime('%d %b %Y')"></span>
+                        <b>Type:</b>&nbsp;<span tal:on-error="string: Not Specified." tal:replace="item_obj/resource_type"></span>
+                        </div>
 
-              </div>
+                   <div><p tal:content="item_description" class="resource-description"></p></div>
+                   <br /><br />
+                   <div class="visualClear"></div>
 
-
-
-
+             
+            </div>
 
             </tal:block>
             </metal:block>
 
             </tal:block>
+
             </tal:entry>
         </div>
 
-        <div class="visualClear"></div>
 
         <div metal:use-macro="context/batch_macros/macros/navigation" />
 
