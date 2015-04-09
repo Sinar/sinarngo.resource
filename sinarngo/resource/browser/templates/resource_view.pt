@@ -19,11 +19,16 @@
 
     <fieldset id="folder-listing">
         <legend>Contents</legend>
-
+<!-- 
     <ul>
         <li tal:content="structure view/w/attachment_1/render"></li>
         <li tal:content="structure view/w/attachment_2/render"></li>
         <li tal:content="structure view/w/attachment_3/render"></li>
+  </ul> -->
+      <ul>
+        <li tal:condition="context/attachment_1"><a tal:attributes="href python:context.absolute_url()+'/@@display-file/attachment_1'" tal:content="context/attachment_1/filename"></a></li>
+        <li tal:condition="context/attachment_2"><a tal:attributes="href python:context.absolute_url()+'/@@display-file/attachment_2'" tal:content="context/attachment_2/filename"></a></li>
+        <li tal:condition="context/attachment_3"><a tal:attributes="href python:context.absolute_url()+'/@@display-file/attachment_3'" tal:content="context/attachment_3/filename"></a></li>
   </ul>
     </fieldset>
 
